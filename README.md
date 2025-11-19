@@ -1,78 +1,104 @@
-# MERN Stack Integration Assignment
+# MERN Blog - Live Deployment
 
-This assignment focuses on building a full-stack MERN (MongoDB, Express.js, React.js, Node.js) application that demonstrates seamless integration between front-end and back-end components.
+A full-stack MERN blog application deployed to production with CI/CD pipeline and monitoring.
 
-## Assignment Overview
+## 🚀 Live Applications
 
-You will build a blog application with the following features:
-1. RESTful API with Express.js and MongoDB
-2. React front-end with component architecture
-3. Full CRUD functionality for blog posts
-4. User authentication and authorization
-5. Advanced features like image uploads and comments
+- **Frontend**: https://my-blog-rosy-rho.vercel.app/
+- **Backend API**:https://mern-stack-integration-benabray.onrender.com
+- **Health Check**:https://mern-stack-integration-benabray.onrender.com/health
 
-## Project Structure
+## 📋 Features
+
+- ✅ Create, read, update, and delete blog posts
+- ✅ Search and filter posts
+- ✅ Responsive design
+- ✅ Production deployment
+- ✅ CI/CD pipeline
+- ✅ Health monitoring
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, Vite, React Router
+- **Backend**: Node.js, Express.js, MongoDB
+- **Deployment**: Vercel (frontend), Render (backend)
+- **CI/CD**: GitHub Actions
+- **Database**: MongoDB Atlas
+
+## 🏗️ Architecture
 
 ```
-mern-blog/
-├── client/                 # React front-end
-│   ├── public/             # Static files
-│   ├── src/                # React source code
-│   │   ├── components/     # Reusable components
-│   │   ├── pages/          # Page components
-│   │   ├── hooks/          # Custom React hooks
-│   │   ├── services/       # API services
-│   │   ├── context/        # React context providers
-│   │   └── App.jsx         # Main application component
-│   └── package.json        # Client dependencies
-├── server/                 # Express.js back-end
-│   ├── config/             # Configuration files
-│   ├── controllers/        # Route controllers
-│   ├── models/             # Mongoose models
-│   ├── routes/             # API routes
-│   ├── middleware/         # Custom middleware
-│   ├── utils/              # Utility functions
-│   ├── server.js           # Main server file
-│   └── package.json        # Server dependencies
-└── README.md               # Project documentation
+User → Vercel (React) → Render (Express API) → MongoDB Atlas
 ```
 
-## Getting Started
+## 📁 Project Structure
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Follow the setup instructions in the `Week4-Assignment.md` file
-4. Complete the tasks outlined in the assignment
+```
+├── client/                 # React frontend
+├── server/                 # Express backend
+├── .github/workflows/      # CI/CD pipelines
+├── DEPLOYMENT.md           # Maintenance guide
+└── README.md
+```
 
-## Files Included
+## 🚀 Deployment
 
-- `Week4-Assignment.md`: Detailed assignment instructions
-- Starter code for both client and server:
-  - Basic project structure
-  - Configuration files
-  - Sample models and components
+### Backend (Render)
+- Automatic deployment from GitHub
+- Environment variables configured
+- HTTPS/SSL enabled
+- Health monitoring
 
-## Requirements
+### Frontend (Vercel)
+- Automatic deployment from GitHub
+- Environment variables configured
+- HTTPS/SSL enabled
+- Static asset optimization
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- npm or yarn
-- Git
+## 🔄 CI/CD Pipeline
 
-## Submission
+GitHub Actions automatically:
+- Runs tests on every push
+- Builds both frontend and backend
+- Deploys to production on success
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+## 📊 Monitoring
 
-1. Complete both the client and server portions of the application
-2. Implement all required API endpoints
-3. Create the necessary React components and hooks
-4. Document your API and setup process in the README.md
-5. Include screenshots of your working application
+- Health check endpoint with system metrics
+- Automatic error tracking
+- Performance monitoring
+- Uptime monitoring via platform dashboards
 
-## Resources
+## 🛠️ Local Development
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [Express.js Documentation](https://expressjs.com/)
-- [React Documentation](https://react.dev/)
-- [Node.js Documentation](https://nodejs.org/en/docs/)
-- [Mongoose Documentation](https://mongoosejs.com/docs/) 
+```bash
+# Backend
+cd server
+npm install
+npm run dev
+
+# Frontend  
+cd client
+npm install
+npm run dev
+```
+
+## 📞 API Endpoints
+
+- `GET /api/posts` - Get all posts
+- `POST /api/posts` - Create new post
+- `PUT /api/posts/:id` - Update post
+- `DELETE /api/posts/:id` - Delete post
+- `GET /api/categories` - Get categories
+
+## 🔧 Environment Variables
+
+See `.env.example` files in both client and server directories for required variables.
+
+## 📝 Maintenance
+
+Regular maintenance tasks and deployment procedures documented in `DEPLOYMENT.md`.
+
+---
+
+**Deployed with ❤️ using modern DevOps practices**
